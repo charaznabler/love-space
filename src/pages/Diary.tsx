@@ -97,7 +97,7 @@ const Diary: React.FC = () => {
         <div className="flex flex-col h-full">
             <header className="flex justify-between items-center mb-6 pt-4">
                 <div>
-                    <h1 className="text-2xl font-bold text-love-900">我们的日记</h1>
+                    <h1 className="text-2xl font-bold text-love-900">宣妃的日记</h1>
                     <p className="text-sm text-love-400">记录每一个感动的瞬间</p>
                 </div>
                 <button
