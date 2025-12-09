@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/40 backdrop-blur-xl border border-white/60 rounded-3xl;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-love-300 to-love-500 text-white border-none px-6 py-3 rounded-full font-semibold cursor-pointer transition-all duration-300 shadow-lg shadow-love-200/50 hover:-translate-y-0.5 hover:shadow-love-300/60 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-white/80 text-love-600 border-2 border-love-200 px-5 py-2 rounded-full font-semibold cursor-pointer transition-all duration-200 hover:bg-love-50 hover:border-love-300;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #fff0f5 0%, #fff5ee 100%);
+  min-height: 100vh;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
