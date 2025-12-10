@@ -3,13 +3,20 @@ import { Outlet, NavLink } from 'react-router-dom';
 import { Heart, Gift, BookHeart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+import backgroundImg from '../assets/background.jpg';
+
 const Layout: React.FC = () => {
     return (
-        <div className="relative min-h-screen w-full overflow-hidden flex flex-col font-sans bg-love-50 selection:bg-love-200 selection:text-love-900">
-            {/* Background Decor - Animated Orbs */}
-            <div className="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-love-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-            <div className="fixed top-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-            <div className="fixed bottom-[-20%] left-[20%] w-[600px] h-[600px] bg-love-100/60 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+        <div className="relative min-h-screen w-full overflow-hidden flex flex-col font-sans selection:bg-love-200 selection:text-love-900">
+            {/* Background Image */}
+            <div
+                className="fixed inset-0 z-0 bg-cover bg-no-repeat origin-bottom"
+                style={{
+                    backgroundImage: `url(${backgroundImg})`,
+                    backgroundPosition: '60% 80%',
+                    transform: 'scale(1.2)'
+                }}
+            />
 
             {/* Additional texture or noise could be added here for more richness, skipping for now */}
 
