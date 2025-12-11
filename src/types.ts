@@ -23,5 +23,8 @@ export interface GiftItem {
   link?: string;
   image?: string;
   status: 'wanted' | 'purchased';
+  category?: 'clothes' | 'bags' | 'cosmetics' | 'electronics' | 'shoes' | 'others';
   note?: string;
 }
+
+export type GiftCategory = NonNullable<GiftItem['category']>;
